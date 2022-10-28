@@ -4,16 +4,16 @@ using Dapper;
 
 namespace ORM_Dapper
 {
-    public class Department_Repository : IDepartmentRepository
+    public class DapperDepartmentRepo : IDepartmentRepository
     {
         private readonly IDbConnection _connection;
 
-        public Department_Repository(IDbConnection connection)
+        public DapperDepartmentRepo(IDbConnection connection)
         {
             _connection = connection;
         }
 
-        public IEnumerable<Department> GetDepartments()
+        public IEnumerable<Department> GetAllDepartments()
         {
             return _connection.Query<Department>("SELECT * FROM departments;");
         }

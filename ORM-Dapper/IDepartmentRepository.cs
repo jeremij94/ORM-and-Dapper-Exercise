@@ -3,7 +3,7 @@ namespace ORM_Dapper
 {
     public interface IDepartmentRepository
     {
-        public IEnumerable<Department> GetDepartments();
+        public IEnumerable<Department> GetAllDepartments();
     }
 }
 
